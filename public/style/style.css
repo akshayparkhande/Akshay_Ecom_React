@@ -1,0 +1,375 @@
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+.header .nav {
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+.header .nav .link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.mainBody {
+  background-color: #78a3a7;
+  margin-top: 2.5rem;
+}
+.mainBody .slick-next {
+  right: -7px;
+}
+.mainBody .slick-prev {
+  left: -7px;
+  z-index: 1;
+}
+.mainBody .slick-dots {
+  bottom: 10px;
+}
+.mainBody .sliderImg img {
+  width: 100%;
+  height: 358px;
+}
+
+.topbrand h2 {
+  text-align: center;
+}
+.topbrand .card {
+  margin-bottom: 1em;
+  margin-top: 1rem;
+}
+.topbrand .card .img_cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+.topbrand .card .img_cont .imgBox {
+  height: 200px;
+}
+.topbrand .card .img_cont .imgBox img {
+  max-width: 100%;
+}
+.topbrand .card .card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.topbrand .card .card-body .cardInfo {
+  margin-bottom: 0.4em;
+}
+.topbrand .card .card-body .cardInfo button {
+  border: none;
+  color: blue;
+}
+.topbrand .card .card-body .priceBox {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+.topbrand .card .card-body .priceBox .offerPrice {
+  font-size: 20px;
+  font: bold;
+  margin-right: 2px;
+}
+.topbrand .card .card-body .priceBox .mainPrice {
+  font-size: 18px;
+  text-decoration: line-through;
+  color: grey;
+}
+.topbrand .card .card-body .buybtn {
+  margin-top: 2px;
+}
+.topbrand .card .card-body .buybtn button {
+  border: hidden;
+  padding: 0.2em 1em;
+  background-color: #3b8a4f;
+}
+.topbrand .card .card-body .buybtn button:hover {
+  color: #fff;
+  background-color: #065804;
+}
+
+.newproducts h2 {
+  margin-top: 9px;
+  text-align: center;
+}
+.newproducts .row .card {
+  margin-bottom: 1rem;
+}
+.newproducts .row .card .name {
+  padding: 4px;
+}
+.newproducts .row .card .price-cart {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.newproducts .row .card .price-cart .price {
+  font-size: 18px;
+}
+.newproducts .row .card .price-cart .price span {
+  text-decoration: line-through;
+  color: grey;
+  font-size: 14px;
+}
+.newproducts .row .card .price-cart button {
+  border: none;
+  border-radius: 50%;
+  background-color: orange;
+  padding: 8px 8px;
+}
+
+.products {
+  margin-top: 3rem;
+}
+.products h2 {
+  text-align: center;
+  margin-top: 1rem;
+}
+.products .container .card {
+  margin-top: 1em;
+}
+.products .container .card .cardImgBox {
+  padding: 8px 8px;
+}
+
+.productDetails {
+  margin-top: 2em;
+  background-color: #ddd;
+}
+.productDetails .container {
+  display: flex;
+}
+.productDetails .container .productTop {
+  display: flex;
+  width: 60%;
+  margin-top: 1em;
+  height: 100vh;
+  position: sticky;
+  bottom: 0;
+  top: 60px;
+}
+.productDetails .container .productTop .sideimages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 17%;
+  margin-right: 15px;
+  background-color: #fff;
+  height: fit-content;
+}
+.productDetails .container .productTop .sideimages .img_box {
+  padding: 5px 3px;
+  width: 30px;
+}
+.productDetails .container .productTop .sideimages .img_box img {
+  max-width: 100%;
+}
+.productDetails .container .productTop .singleImage {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+}
+.productDetails .container .productTop .singleImage .imagebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 0.2em;
+  width: 85%;
+}
+.productDetails .container .productTop .singleImage .imagebox img {
+  max-width: 100%;
+}
+.productDetails .container .cartDetails {
+  margin-top: 1.5em;
+  width: 40%;
+  margin-left: 2em;
+  background-color: #fff;
+  padding: 2px 15px;
+}
+.productDetails .container .cartDetails .ratingBox {
+  background-color: #048820;
+  width: 14%;
+  border-radius: 4px;
+  padding: 2px 4px;
+  color: #fff;
+}
+.productDetails .container .cartDetails .ratingBox sub {
+  font-size: 20px;
+  margin-left: 2px;
+}
+.productDetails .container .cartDetails .priceBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productDetails .container .cartDetails .priceBar #stikeThrough {
+  text-decoration: line-through;
+  color: #c7baba;
+}
+.productDetails .container .cartDetails .inclusive_text {
+  font-size: 18px;
+  margin-top: -8px;
+  color: green;
+}
+.productDetails .container .cartDetails .cartBtn {
+  margin-top: 0.5em;
+}
+.productDetails .container .cartDetails .cartBtn button {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #ff3f6c;
+  border-radius: 5px;
+  margin-right: 20px;
+  color: #fff;
+}
+.productDetails .container .cartDetails .cartBtn #buy {
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.productDetails .container .cartDetails .deliveryOptions input {
+  border-radius: 4px;
+  padding: 10px 3px;
+  margin-left: 10px;
+  border-color: #ddd;
+}
+.productDetails .container .cartDetails .deliveryOptions .note {
+  font-size: 12px;
+  margin-left: 15px;
+  margin-top: 5px;
+  color: red;
+}
+.productDetails .container .cartDetails .deliveryOptions .payinfo {
+  font-size: 20px;
+  padding: 0;
+}
+.productDetails .container .cartDetails .best_offers h5 span {
+  font: lighter;
+  color: red;
+}
+.productDetails .container .cartDetails .card_rating .rating_bars li {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.productDetails .container .cartDetails .card_rating .rating_bars li .rating_length {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.productDetails .container .cartDetails .card_rating .rating_bars li .rating_length span {
+  font-size: 20px;
+}
+.productDetails .container .cartDetails .card_rating .rating_bars li .rating_length .progress {
+  width: 100%;
+  margin-left: 5px;
+}
+.productDetails .container .cartDetails .card_rating .rating_bars li .rating_count {
+  font-size: 20px;
+}
+.productDetails .container .cartDetails .riview .reviewform {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 15px 9px;
+}
+.productDetails .container .cartDetails .riview .reviewform #text {
+  width: 35%;
+  border: 1px solid #ddd;
+  padding: 5px 3px;
+}
+.productDetails .container .cartDetails .riview .reviewform #num {
+  width: 25%;
+  border: 1px solid #ddd;
+  padding: 5px 3px;
+}
+.productDetails .container .cartDetails .riview .reviewform #submit {
+  border: none;
+  border-radius: 4px;
+  width: 15%;
+  padding: 13px 5px;
+  background-color: #ff3f6c;
+}
+.productDetails .container .cartDetails .review_desc {
+  padding: 4px 2px;
+  border: 1px solid #ddd;
+  margin-top: 7px;
+}
+.productDetails .container .cartDetails .review_desc .riview_by_custm {
+  display: flex;
+}
+.productDetails .container .cartDetails .review_desc .riview_by_custm .star {
+  padding: 1px 9px;
+  background-color: green;
+  height: 31px;
+  color: white;
+  font-size: 17px;
+  margin-right: 4px;
+}
+.productDetails .container .cartDetails .review_desc .riview_by_custm p {
+  margin-bottom: 0;
+}
+.productDetails .container .cartDetails .review_desc .customer_info {
+  font-size: 14px;
+  color: #7d7474;
+}
+.productDetails .container .cartDetails::-webkit-scrollbar {
+  display: none;
+}
+
+.cart {
+  background-color: #F1F3F6;
+}
+.cart .container {
+  margin-top: 2.5rem;
+}
+.cart .container .items {
+  font-family: Roboto, Arial, sans-serif;
+}
+.cart .container .items .address {
+  background-color: white;
+  padding: 8px 2px;
+}
+.cart .container .items .cartItems {
+  background-color: white;
+  margin-top: 1rem;
+  margin-bottom: 1em;
+  padding: 5px 2px;
+}
+.cart .container .items .cartItems .cartElemImg img {
+  width: 70%;
+}
+.cart .container .items .cartItems .cartElemDetails h2 {
+  font-size: 25px;
+}
+.cart .container .items .cartItems .cartElemDetails h3 {
+  font-size: 20px;
+}
+.cart .container .priceDetails {
+  background-color: white;
+  padding: 8px 10px;
+}
+.cart .container .priceDetails .itemD {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+}
+
+/*# sourceMappingURL=style.css.map */
