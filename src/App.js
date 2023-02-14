@@ -7,7 +7,8 @@ import Services from "./components/Services";
 import SingleProduct from "./pages/ProductPage";
 import BodySection from "./pages/LandingPage";
 import Cart from "./pages/CartPage";
-
+import "@stripe/stripe-js";
+import Success from "./pages/success";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="cart" element={<Cart />} />
           <Route path="singleproduct/:productId" element={<SingleProduct />} />
           <Route path="*" element={<Nopage />} />
+          <Route path="success" element={<Success />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -23,7 +23,8 @@ function SingleProduct() {
     setCart(elemId);
   }, [cartDetail]);
   if (productData[0]) {
-    const { images, title, price, rating, review, id, description } = productData[0];
+    const { images, title, price, rating, review, id, description } =
+      productData[0];
 
     const submitComment = () => {
       setComment([
@@ -70,9 +71,26 @@ function SingleProduct() {
               </div>
               <div className="inclusive_text">inclusive of all taxes</div>
               <div className="cartBtn">
-                <button id="buy">Buy</button>
                 {chekCart.includes(id) ? (
-                  <Link to='/cart' ><button id="buy">Go to cart</button></Link>
+                  <Link to="/cart">
+                    <button id="buy">Buy</button>
+                  </Link>
+                ) : (
+                  <Link to='/cart'>
+                    <button
+                    id="buy"
+                    onClick={() => {
+                      dispatch(increment(productData[0]));
+                    }}
+                  >
+                    Buy
+                  </button>
+                  </Link>
+                )}
+                {chekCart.includes(id) ? (
+                  <Link to="/cart">
+                    <button id="buy">Go to cart</button>
+                  </Link>
                 ) : (
                   <button
                     onClick={() => {

@@ -1,7 +1,16 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem } from "../features/counterSlice";
+import { loadStripe } from "@stripe/stripe-js";
 
+let stripePromise = loadStripe('pk_test_51MbGnoSC91nM5njsyv8Aw8uFB7cp0TGMigtCqJhsA2Sco4mJpCeSGXQyvoKQOPTwmFl6Xsg408GLv3JGvfZEbl9Z00lvkQyGuw');
+
+const getStripe = ()=>{
+    if(!stripePromise){
+      stripePromise = loadStripe('pk_test_51MbGnoSC91nM5njsyv8Aw8uFB7cp0TGMigtCqJhsA2Sco4mJpCeSGXQyvoKQOPTwmFl6Xsg408GLv3JGvfZEbl9Z00lvkQyGuw');
+    }
+    return stripePromise
+}
 function Cart() {
   const dispatch = useDispatch();
   const count = useSelector((state) => state.cartCounter.length);
@@ -9,7 +18,24 @@ function Cart() {
   const [totalAmount, setTotalAmount] = useState(0)
   const [totalAmountWithOffer, setTotalAmountWithOffer] = useState(0)
   
+const item =  {
+    price : "price_1MbGqdSC91nM5njszSHrm3Co",
+    quantity: 1
+}
 
+const checkoutOptions = {
+  lineItems: [item],
+  mode: "payment",
+  successUrl: `${window.location.origin}/success`,
+  cancelUrl: `${window.location.origin}/cart`
+}
+
+const redirectTocheckout =async()=>{
+  console.log("redirecttocheckot");
+  const stripe = await getStripe();
+  const {error} =  await stripe.redirectToCheckout(checkoutOptions);
+  console.log("strpe error", error);
+}
   useEffect(()=>{
    let initialvalue = 0; 
    let total= card_data.map((elem,ind)=>{
@@ -74,6 +100,10 @@ function Cart() {
                 <div className="totalAmount itemD">
                   <div>Total Amount</div>
                   <div>₹{totalAmountWithOffer}</div>
+                </div>
+                <hr/>
+                <div className="checkout">
+                  <button onClick={redirectTocheckout}>Checkout</button>
                 </div>
               </div>
             </div>
